@@ -1,10 +1,10 @@
 // с большой буквы класс - значит КОНСТРУКТОР БАТЬ
 function DomElement(selector, height, width, bg, fontSize) {
   this.selector = selector;
-  this.height = height;
-  this.width = width;
+  this.height = height + 'px';
+  this.width = width + 'px';
   this.bg = bg;
-  this.fontSize = fontSize;
+  this.fontSize = fontSize + 'px';
   this.getElement = function (text) {
     let element;
     // если стартвиф (начинается с ) точки
@@ -35,8 +35,8 @@ function DomElement(selector, height, width, bg, fontSize) {
   };
 }
 // создаем новый обьект
-const blockElement = new DomElement('.block', 100, 100, 'lightblue', 24);
-const paragraphElement = new DomElement('#btn', 50, 300, 'yellow', 24);
+const blockElement = new DomElement('.block', 100, 500, 'lightblue', 24);
+const paragraphElement = new DomElement('#btn', 100, 500, 'yellow', 24);
 
 // создаем элементы на странице
 blockElement.getElement('Создал короче блок с классом');
